@@ -1,0 +1,796 @@
+/*FONTES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+/*ANIMAÇOES*/
+
+[data-anime]{
+    opacity: 0;
+    transition: .95s;
+}
+[data-anime="left"]{
+    transform: translate3d(-50px, 0, 0);
+}
+[data-anime="right"]{
+    transform: translate3d(23px, 0, 0);
+}
+[data-anime="down"]{
+    transform: translate3d(0, 50px, 0);
+}
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*CABEÇALHO*/
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*NAVBAR*/
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 7px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.5s ease;
+}
+.navbar.sticky{
+    background: #ec441e;
+    padding: 20px 0px;
+    transition: all 0.7s ease;
+}
+.navbar.sticky .logotipo{
+    display: none !important;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.navbar .max-width .logotipo{
+    height: 90px;
+    width: 90px;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #ec441e;
+    font-weight: bolder;
+}
+.navbar.sticky .menu li a:hover{
+    color: white;
+}
+
+/*BOTÃO MENU*/
+
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #ec441e;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    z-index: 999;
+    font-size: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*HOME*/
+
+.home{
+    display: flex;
+    background-color: #afbed5;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 30px;
+    font-weight: 500;
+}
+.home .home-content .text-2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: #ec441e;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: #ec441e;
+    color: white;
+    font-size: 25px;
+    padding: 12px 36px;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #ec441e;
+    transition: all 0.2s ease;
+}
+.home .home-content a:hover{
+    color: #ec441e;
+    background: none;
+}
+.soico{
+    margin-left: 15px;
+}
+
+/*TODAS OS CONTENT SIMILARES*/
+
+section{
+    padding: 100px 0px;
+}
+.about, .parceiros, .doacao, .projetos{
+    font-family: 'Poppings', sans-serif;
+}
+.about .about-content, .parceiros .forma-content, .doacao .doacao-content, .contato .contato-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title1{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: black;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    padding: 5px;
+    font-size: 20px;
+    color: #ec441e;
+    background: white;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*SOBRE*/
+
+.about .title::after{
+    content: "Conheça";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content  .right{
+    width: 55%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 20%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.about .about-content .right .text span{
+    color: #ec441e;   
+}
+.about .about-content .right p{
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.about .about-content .left1{
+    width: 45%;
+}
+.about .about-content  .right1{
+    width: 55%;
+}
+.about .about-content .left1 img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin-left: 100px;
+}
+.about .about-content .right1 .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.about .about-content .right1 .text span{
+    color: #ec441e;   
+}
+.about .about-content .right1 p{
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.about .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.about .carousel .card:hover{
+    background: #ec441e;
+}
+.about .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.about .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.about .carousel .card .text{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 20px 0 7px 0;
+}
+.about .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #ec441e;
+    transition: all 0.4s ease;
+}
+.about .carousel .card:hover img{
+    border-color: white;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid #ec441e !important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active, .owl-dot:hover{
+    background: #ec441e !important;
+}
+
+/*PARCEIROS*/
+
+.parceiros, .projetos, .contato{
+    background: #111;
+    color: white;
+}
+.parceiros .title::before,
+.about .about-content .title::before,
+.contato .title::before{
+    background: white;
+}
+.parceiros .title::after,
+.about .about-content .title::after,
+.contato .title::after{
+    background: #111;
+    content: "Faça Parte";
+}
+.parceiros .forma-content .card{
+    width: calc(30% - 10px);
+    margin-bottom: 30px;
+    padding: 10px 25px;
+}
+.parceiros .forma-content .card{
+    position: relative;
+    width: 310px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+.parceiros .forma-content .card .face{
+    border-radius: 6%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: all 1s ease;
+    transform: perspective(500px) rotateY(0deg);
+}
+.parceiros .forma-content .card .face img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.parceiros .forma-content .card .face.front{
+    background: rgb(41, 40, 40);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+.parceiros .forma-content .card:hover .face.front{
+    transform: perspective(500px) rotateY(180deg);
+}
+.parceiros .forma-content .card .face.back{
+    background: #ec441e;
+    color: white;
+    text-align: center;
+    transform: perspective(500px) rotateY(180deg);
+}
+.parceiros .forma-content .card .face.back p{
+    margin: 20px;
+}
+.parceiros .forma-content .card .face.back span{
+    color: white;
+    font-weight: bolder;
+}
+.parceiros .forma-content .card:hover .face.back{
+    transform: perspective(500px) rotateY(360deg);
+}
+.parceiros .forma-content a{
+    display: inline-block;
+    background: #ec441e;
+    color: white;
+    font-size: 25px;
+    padding: 15px 30px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 2px solid #ec441e;
+    transition: all 0.2s ease;
+}
+.parceiros .forma-content a:hover{
+    color: #ec441e;
+    background: none;
+}
+
+/*DOAÇÃO*/
+
+.doacao .title::after{
+    content: 'Salve';
+}
+.doacao .doacao-content .column{
+    width: calc(50% - 30px);
+}
+.doacao .doacao-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.doacao .doacao-content .left p{
+    text-align: justify;
+    line-height: 25px;
+}
+.doacao .doacao-content .right{
+    text-align: center; 
+}
+.doacao .doacao-content .right .bars{
+    margin-bottom: 20px;   
+}
+.doacao .doacao-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.doacao .doacao-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.doacao .doacao-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    margin-top: 4px;
+    position: relative;
+    border-radius: 10px;
+}
+.doacao .doacao-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top:0;
+    background: #ec441e;
+    border-radius: 10px;
+}
+.doacao .doacao-content .right .linefront::before{
+    width: 60%;
+}
+
+.doacao .doacao-content .right a{
+    display: inline-block;
+    background: #ec441e;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 8px 150px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #ec441e;
+    transition: all 0.2s ease;
+}
+.doacao .doacao-content .right a:hover{
+    color: #ec441e;
+    background: none;
+}
+
+/*galeria*
+
+.galeria .title::after{
+    content: 'Compartilhe';
+}
+.galeria .galeriacorpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.galeria .galeriacorpo .container{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.galeria .galeriacorpo .container .card{
+    position: relative;
+    height: 280px;
+    background: #ec441e;
+    display: flex;
+    width: 45%;
+    margin: 30px 0;
+    border-radius: 3%;
+    color: white;
+}
+.galeria .galeriacorpo .container .card .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 96%;
+    background: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    border-radius: 3%;
+}
+.galeria .galeriacorpo .container .card:hover .imgBx{
+    width: 140px;
+    height: 140px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: white;
+    border-radius: 50%;
+}
+.galeria .galeriacorpo .container .card .imgBx::before{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(255, 255, 255,.05);
+    font-weight: 700;
+}
+.galeria .galeriacorpo .container .card .imgBx img{
+    max-width: 170px;
+    border-radius: 10%;
+    transition: 0.4s ease-in-out;
+}
+.galeria .galeriacorpo .container .card:hover .imgBx img{
+    max-width: 90%;
+    border-radius: 50%;
+}
+.galeria .galeriacorpo .container .card .content{
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.galeria .galeriacorpo .container .card .content h3{
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+.galeria .galeriacorpo .container .card .content p{
+    font-family: 'Poppings', sans-serif;
+}
+.galeria .galeriacorpo .container .card .content a{
+    display: inline-block;
+    background: white;
+    color: #ec441e;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid white;
+    transition: all 0.2s ease;
+    font-family: 'Ubuntu', sans-serif;
+}
+.galeria .galeriacorpo .container .card .content a:hover{
+    color: white;
+    background: none;
+}
+
+/*MEDIA QUERY RESPONSIVO*/
+
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 1094px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        background: black;
+        height: 100vh;
+        width: 86%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.4s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .galeria .galeriacorpo .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .galeria .galeriacorpo .container .card{
+        width: 400px;
+    }
+    .galeria .galeriacorpo .container .card:hover .imgBx{
+        border-radius: 0 !important;
+        background: rgb(169, 166, 166) !important;
+    }
+    .galeria .galeriacorpo .container .card .imgBx{
+        background: rgb(169, 166, 166) !important;
+    }
+}
+
+@media (max-width: 947px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    } 
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .parceiros .forma-content .card{
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    .doacao .doacao-content .column, .contato .contato-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media(max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .parceiros .forma-content .card{
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px){
+    .parceiros .forma-content .card{
+        width: 100%;
+        flex-direction: column;
+        height: 250px;
+    }
+    .galeria .galeriacorpo .container .card{
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+    }
+    .galeria .galeriacorpo .container .card .imgBx{
+        position: relative;
+    }
+    .galeria .galeriacorpo .container .card .imgBx, .galeria .galeriacorpo .container .card:hover .imgBx{
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+    .galeria .galeriacorpo .container .card .imgBx img,
+    .galeria .galeriacorpo .container .card:hover .imgBx img{
+        max-width: 100px;
+    }
+    .galeria .galeriacorpo .container .card .content{
+        position: relative;
+        width: 100%;
+    }
+    .galeria .galeriacorpo .container .card:hover .imgBx{
+        border-radius: 0 !important;
+        background: rgb(169, 166, 166) !important;
+    }
+    .galeria .galeriacorpo .container .card .imgBx{
+        background: rgb(169, 166, 166) !important;
+    }
+}  
+
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .about .about-content .right a{
+    font-size: 17px;
+    padding: 10px 30px;
+    }
+    .about .about-content .right .btn-a{
+        font-size: 17px;
+        padding: 10px 30px;
+        }
+}
