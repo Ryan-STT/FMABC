@@ -176,10 +176,10 @@ html{
 section{
     padding: 100px 0px;
 }
-.about, .parceiros, .doacao, .projetos{
+.about, .parceiros, .doacao, .galeria{
     font-family: 'Poppings', sans-serif;
 }
-.about .about-content, .parceiros .forma-content, .doacao .doacao-content, .contato .contato-content{
+.about .about-content, .parceiros .forma-content, .doacao .doacao-content, .galeria .galeriacorpo{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -257,14 +257,13 @@ section .title::after{
     letter-spacing: 1px;
     line-height: 25px;
 }
-
 .about .about-content .left1{
     width: 45%;
 }
 .about .about-content  .right1{
     width: 55%;
 }
-.about .about-content .left1 img{
+.about .about-content .left1 .homeimg{
     height: 400px;
     width: 400px;
     object-fit: cover;
@@ -391,6 +390,7 @@ section .title::after{
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border-radius: 50%;
 }
 .parceiros .forma-content .card .face.front{
     background: rgb(41, 40, 40);
@@ -417,18 +417,25 @@ section .title::after{
 .parceiros .forma-content .card:hover .face.back{
     transform: perspective(500px) rotateY(360deg);
 }
-.parceiros .forma-content a{
+.parceiros .forma-content .card .face.back .linkb2{
+    color: white;
+    text-decoration: none;
+}
+.parceiros .forma-content .card .face.back .linkb2:hover{
+    font-weight: bolder;
+}
+.parceiros .forma-content .btnparceiro{
     display: inline-block;
     background: #ec441e;
     color: white;
     font-size: 25px;
-    padding: 15px 30px;
+    padding: 15px 60px;
     font-weight: 500;
     border-radius: 6px;
     border: 2px solid #ec441e;
     transition: all 0.2s ease;
 }
-.parceiros .forma-content a:hover{
+.parceiros .forma-content .btnparceiro:hover{
     color: #ec441e;
     background: none;
 }
@@ -485,7 +492,6 @@ section .title::after{
 .doacao .doacao-content .right .linefront::before{
     width: 60%;
 }
-
 .doacao .doacao-content .right a{
     display: inline-block;
     background: #ec441e;
@@ -505,7 +511,7 @@ section .title::after{
 
 /*galeria*
 
-.galeria .title::after{
+.galeria .title::before{
     content: 'Compartilhe';
 }
 .galeria .galeriacorpo{
@@ -659,8 +665,6 @@ section .title::after{
         font-size: 25px;
     }
 }
-
-
 @media (max-width: 991px){
     .max-width{
         padding: 0 50px;
@@ -699,16 +703,39 @@ section .title::after{
     .max-width{
         max-width: 800px;
     }
+    .about .about-content{
+        justify-content: center;
+    }
     .about .about-content .column{
         width: 100%;
     }
     .about .about-content .left{
         display: flex;
         justify-content: center;
-        margin: 0 auto 60px;
+        margin: 0px 0px;
+    }
+    .about .about-content .left1{
+        display: flex;
+        justify-content: center;
+        margin: 0px 0px;
+    }
+    .about .about-content .right p{
+        margin-bottom: 30px;
     }
     .about .about-content .right{
         flex: 100%;
+    }
+    .about .about-content .right1{
+        flex: 100%;
+    }
+    .logotipo{
+        display: none;
+    }
+    .navbar{
+        padding: 20px 0px;
+    }
+    .homeimg{
+        display: none;
     }
     .parceiros .forma-content .card{
         width: calc(50% - 20px);
@@ -717,6 +744,11 @@ section .title::after{
     .doacao .doacao-content .column, .contato .contato-content .column{
         width: 100%;
         margin-bottom: 35px;
+    }
+    .parceiros .forma-content{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
     }
 }
 
