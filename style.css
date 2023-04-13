@@ -65,8 +65,8 @@ html{
     justify-content: start;
 }
 .navbar .max-width .logotipo{
-    height: 90px;
-    width: 90px;
+    height: 150px;
+    width: 150px;
 }
 
 .navbar .menu li{
@@ -236,6 +236,12 @@ section .title::after{
 .about .about-content  .right{
     width: 55%;
 }
+.about .about-content .left .logohome{
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 20%;
+}
 .about .about-content .left img{
     height: 400px;
     width: 400px;
@@ -250,6 +256,14 @@ section .title::after{
 .about .about-content .right .text span{
     color: #ec441e;   
 }
+.about .about-content .right p span{
+    color: #ec441e;
+    font-weight: 600;
+}
+.about .about-content .right1 p span{
+    color: #ec441e;
+    font-weight: 600;
+}
 .about .about-content .right p{
     text-align: justify;
     font-size: 18px;
@@ -259,9 +273,11 @@ section .title::after{
 }
 .about .about-content .left1{
     width: 45%;
+    margin-top: 70px;
 }
 .about .about-content  .right1{
     width: 55%;
+    margin-top: 70px;
 }
 .about .about-content .left1 .homeimg{
     height: 400px;
@@ -276,6 +292,9 @@ section .title::after{
     margin-bottom: 20px;
 }
 .about .about-content .right1 .text span{
+    color: #ec441e;   
+}
+.about .about-content .right1 .p span{
     color: #ec441e;   
 }
 .about .about-content .right1 p{
@@ -424,7 +443,13 @@ section .title::after{
 .parceiros .forma-content .card .face.back .linkb2:hover{
     font-weight: bolder;
 }
-.parceiros .forma-content .btnparceiro{
+.btndiv{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.btnparceiro{
     display: inline-block;
     background: #ec441e;
     color: white;
@@ -435,7 +460,7 @@ section .title::after{
     border: 2px solid #ec441e;
     transition: all 0.2s ease;
 }
-.parceiros .forma-content .btnparceiro:hover{
+.btnparceiro:hover{
     color: #ec441e;
     background: none;
 }
@@ -507,6 +532,10 @@ section .title::after{
 .doacao .doacao-content .right a:hover{
     color: #ec441e;
     background: none;
+}
+.metadoacao{
+    color: #ec441e;
+    font-weight: bolder;
 }
 
 /*galeria*
@@ -684,6 +713,12 @@ section .title::after{
     .galeria .galeriacorpo .container .card .imgBx{
         background: rgb(169, 166, 166) !important;
     }
+    .about .about-content .right .text{
+        margin-top: 70px;
+    }
+    .about .about-content .right p{
+        margin-bottom: 0px !important;
+    }
 }
 
 @media (max-width: 947px){
@@ -725,10 +760,13 @@ section .title::after{
     .about .about-content .right{
         flex: 100%;
     }
+    .text{
+        margin-top: 10px;
+    }
     .about .about-content .right1{
         flex: 100%;
     }
-    .logotipo{
+    .logotipo, .logohome{
         display: none;
     }
     .navbar{
