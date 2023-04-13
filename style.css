@@ -65,8 +65,8 @@ html{
     justify-content: start;
 }
 .navbar .max-width .logotipo{
-    height: 150px;
-    width: 150px;
+    height: 90px;
+    width: 90px;
 }
 
 .navbar .menu li{
@@ -236,6 +236,12 @@ section .title::after{
 .about .about-content  .right{
     width: 55%;
 }
+.about .about-content .right2{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
 .about .about-content .left .logohome{
     height: 500px;
     width: 500px;
@@ -253,10 +259,24 @@ section .title::after{
     font-weight: 600;
     margin-bottom: 20px;
 }
+
+.about .about-content .right2 .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
 .about .about-content .right .text span{
     color: #ec441e;   
 }
+.about .about-content .right2 .text span{
+    color: #ec441e;   
+}
 .about .about-content .right p span{
+    color: #ec441e;
+    font-weight: 600;
+}
+.about .about-content .right2 p span{
     color: #ec441e;
     font-weight: 600;
 }
@@ -266,6 +286,13 @@ section .title::after{
 }
 .about .about-content .right p{
     text-align: justify;
+    font-size: 18px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.about .about-content .right2 p{
+    text-align: center;
     font-size: 18px;
     margin-top: 15px;
     letter-spacing: 1px;
