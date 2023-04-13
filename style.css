@@ -264,7 +264,7 @@ section .title::after{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 20px;
-    margin-top: 80px;
+    margin-top: 90px;
 }
 .about .about-content .right .text span{
     color: #ec441e;   
@@ -295,6 +295,7 @@ section .title::after{
     text-align: center;
     font-size: 18px;
     margin-top: 15px;
+    margin-bottom: 30px;
     letter-spacing: 1px;
     line-height: 25px;
 }
