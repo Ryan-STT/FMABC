@@ -255,6 +255,13 @@ section .title::after{
     border-radius: 20%;
     margin-left: 100px;
 }
+.about .about-content .left1 .logohomeCasa{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin-left: 100px;
+}
 
 .about .about-content  .right{
     width: 55%;
@@ -262,10 +269,10 @@ section .title::after{
 .about .about-content  .right1{
     width: 55%;
 }
-.about .about-content .right2{
+.about .about-content  .right2{
+    width: 100%;
+    margin-top: 100px;
     text-align: center;
-    margin-top: 130px;
-    margin-bottom: 110px;
 }
 
 .about .about-content .right .text{
@@ -294,12 +301,11 @@ section .title::after{
     margin-top: 15px;
     letter-spacing: 1px;
     line-height: 25px;
-}
-.about .about-content .right2 p{
-    text-align: center;
+}.about .about-content .right2 p{
+    text-align: justify;
     font-size: 18px;
-    letter-spacing: 1px;
     margin-top: 15px;
+    letter-spacing: 1px;
     line-height: 25px;
 }
 
@@ -312,6 +318,7 @@ section .title::after{
 .about .about-content .right2 .text span{
     color: #ec441e;   
 }
+
 .about .about-content .right p span{
     color: #ec441e;
     font-weight: 600;
