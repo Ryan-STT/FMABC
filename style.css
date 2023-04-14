@@ -244,6 +244,7 @@ section .title::after{
     width: 400px;
     object-fit: cover;
     border-radius: 20%;
+    margin-top: -80px;
 }
 .about .about-content .left1{
     width: 45%;
@@ -265,6 +266,7 @@ section .title::after{
 
 .about .about-content  .right{
     width: 55%;
+    margin-top: -80px;
 }
 .about .about-content  .right1{
     width: 55%;
