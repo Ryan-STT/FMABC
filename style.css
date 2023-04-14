@@ -233,15 +233,6 @@ section .title::after{
 .about .about-content .left{
     width: 45%;
 }
-.about .about-content  .right{
-    width: 55%;
-}
-.about .about-content .right2{
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
 .about .about-content .left .logohome{
     height: 500px;
     width: 500px;
@@ -254,37 +245,50 @@ section .title::after{
     object-fit: cover;
     border-radius: 20%;
 }
+.about .about-content .left1{
+    width: 45%;
+}
+.about .about-content .left1 .homeimg{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin-left: 100px;
+}
+
+.about .about-content  .right{
+    width: 55%;
+}
+.about .about-content  .right1{
+    width: 55%;
+}
+.about .about-content .right2{
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom: 110px;
+}
+
 .about .about-content .right .text{
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 20px;
 }
-
+.about .about-content .right1 .text{
+    font-size: 25px;
+    font-weight: 600;
+}
 .about .about-content .right2 .text{
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 20px;
-    margin-top: 90px;
 }
-.about .about-content .right .text span{
-    color: #ec441e;   
-}
-.about .about-content .right2 .text span{
-    color: #ec441e;   
-}
-.about .about-content .right p span{
-    color: #ec441e;
-    font-weight: 600;
-}
-.about .about-content .right2 p span{
-    color: #ec441e;
-    font-weight: 600;
-}
-.about .about-content .right1 p span{
-    color: #ec441e;
-    font-weight: 600;
-}
+
 .about .about-content .right p{
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.about .about-content .right1 p{
     text-align: justify;
     font-size: 18px;
     margin-top: 15px;
@@ -294,44 +298,33 @@ section .title::after{
 .about .about-content .right2 p{
     text-align: center;
     font-size: 18px;
-    margin-top: 15px;
-    margin-bottom: 30px;
     letter-spacing: 1px;
+    margin-top: 15px;
     line-height: 25px;
 }
-.about .about-content .left1{
-    width: 45%;
-    margin-top: 70px;
-}
-.about .about-content  .right1{
-    width: 55%;
-    margin-top: 70px;
-}
-.about .about-content .left1 .homeimg{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 20%;
-    margin-left: 100px;
-}
-.about .about-content .right1 .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 20px;
+
+.about .about-content .right .text span{
+    color: #ec441e;   
 }
 .about .about-content .right1 .text span{
     color: #ec441e;   
 }
-.about .about-content .right1 .p span{
+.about .about-content .right2 .text span{
     color: #ec441e;   
 }
-.about .about-content .right1 p{
-    text-align: justify;
-    font-size: 18px;
-    margin-top: 15px;
-    letter-spacing: 1px;
-    line-height: 25px;
+.about .about-content .right p span{
+    color: #ec441e;
+    font-weight: 600;
 }
+.about .about-content .right1 p span{
+    color: #ec441e;
+    font-weight: 600;
+}
+.about .about-content .right2 p span{
+    color: #ec441e;
+    font-weight: 600;
+}
+
 .about .carousel .card{
     background: #222;
     border-radius: 6px;
@@ -410,7 +403,6 @@ section .title::after{
 .parceiros .forma-content .card{
     width: calc(30% - 10px);
     margin-bottom: 30px;
-    padding: 10px 25px;
 }
 .parceiros .forma-content .card{
     position: relative;
@@ -475,14 +467,13 @@ section .title::after{
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin-top: 30px;
 }
 .btnparceiro{
     display: inline-block;
     background: #ec441e;
     color: white;
     font-size: 25px;
-    padding: 15px 60px;
+    padding: 15px 30px;
     font-weight: 500;
     border-radius: 6px;
     border: 2px solid #ec441e;
