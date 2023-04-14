@@ -65,8 +65,8 @@ html{
     justify-content: start;
 }
 .navbar .max-width .logotipo{
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
 }
 
 .navbar .menu li{
@@ -77,7 +77,7 @@ html{
     display: block;
     color: white;
     font-size: 25px;
-    font-weight: 900;
+    font-weight: bold;
     margin-left: 25px;
     transition: color 0.3s ease;
 }
@@ -136,11 +136,11 @@ html{
 }
 .home .home-content .text-1{
     font-size: 30px;
-    font-weight: 500;
+    font-weight: bold;
 }
 .home .home-content .text-2{
     font-size: 60px;
-    font-weight: 600;
+    font-weight: bold;
     margin-left: -3px;
 }
 .home .home-content .text-3{
@@ -149,7 +149,7 @@ html{
 }
 .home .home-content .text-3 span{
     color: #ec441e;
-    font-weight: 500;
+    font-weight: bold;
 }
 .home .home-content a{
     display: inline-block;
@@ -157,7 +157,7 @@ html{
     color: white;
     font-size: 25px;
     padding: 12px 36px;
-    font-weight: 500;
+    font-weight: bold;
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid #ec441e;
@@ -189,7 +189,7 @@ section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 60px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
@@ -198,7 +198,7 @@ section .title1{
     position: relative;
     text-align: center;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: bold;
     margin-top: 80px;
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -247,47 +247,42 @@ section .title::after{
     margin-top: -80px;
 }
 .about .about-content .left1{
-    width: 45%;
-}
-.about .about-content .left1 .homeimg{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 20%;
-    margin-left: 100px;
-}
-.about .about-content .left1 .logohomeCasa{
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border-radius: 20%;
-    margin-left: 100px;
+    width: 50%;
+    padding-left: 30px;
+    padding-bottom: 100px;
 }
 
 .about .about-content  .right{
     width: 55%;
-    margin-top: -80px;
+    margin-top: -60px;
 }
 .about .about-content  .right1{
-    width: 55%;
+    width: 50%;
+    padding-right: 30px;
 }
 .about .about-content  .right2{
-    width: 100%;
-    margin-top: 100px;
-    text-align: center;
+    display: none !important;
 }
 
 .about .about-content .right .text{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: bold;
 }
 .about .about-content .right1 .text{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: bold;
+    text-align: center;
 }
 .about .about-content .right2 .text{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+.about .about-content .left1 .text{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .about .about-content .right p{
@@ -298,13 +293,21 @@ section .title::after{
     line-height: 25px;
 }
 .about .about-content .right1 p{
-    text-align: justify;
+    text-align: center;
     font-size: 18px;
     margin-top: 15px;
     letter-spacing: 1px;
     line-height: 25px;
-}.about .about-content .right2 p{
-    text-align: justify;
+}
+.about .about-content .right2 p{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.about .about-content .left1 p{
+    text-align: center;
     font-size: 18px;
     margin-top: 15px;
     letter-spacing: 1px;
@@ -320,18 +323,25 @@ section .title::after{
 .about .about-content .right2 .text span{
     color: #ec441e;   
 }
+.about .about-content .left1 .text span{
+    color: #ec441e;   
+}
 
 .about .about-content .right p span{
     color: #ec441e;
-    font-weight: 600;
+    font-weight: bold;
 }
 .about .about-content .right1 p span{
     color: #ec441e;
-    font-weight: 600;
+    font-weight: bold;
 }
 .about .about-content .right2 p span{
     color: #ec441e;
-    font-weight: 600;
+    font-weight: bold;
+}
+.about .about-content .left1 p span{
+    color: #ec441e;
+    font-weight: bold;
 }
 
 .about .carousel .card{
@@ -357,7 +367,7 @@ section .title::after{
 .about .carousel .card .text{
     color: white;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: bold;
     margin: 20px 0 7px 0;
 }
 .about .carousel .card img{
@@ -483,7 +493,7 @@ section .title::after{
     color: white;
     font-size: 25px;
     padding: 15px 30px;
-    font-weight: 500;
+    font-weight: bold;
     border-radius: 6px;
     border: 2px solid #ec441e;
     transition: all 0.2s ease;
@@ -503,7 +513,7 @@ section .title::after{
 }
 .doacao .doacao-content .left .text{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 .doacao .doacao-content .left p{
@@ -521,8 +531,13 @@ section .title::after{
     align-items: center;
     justify-content: space-between;
 }
+.doacao .doacao-content .right .info span{
+    font-weight: bolder;
+    font-size: 18px;
+    color: #ec441e;
+}
 .doacao .doacao-content .right span{
-    font-weight: 500;
+    font-weight: bold;
     font-size: 18px;
 }
 .doacao .doacao-content .right .line{
@@ -726,6 +741,7 @@ section .title::after{
     .max-width{
         padding: 0 50px;
     }
+
     .galeria .galeriacorpo .container{
         width: 100%;
         flex-direction: column;
@@ -741,11 +757,24 @@ section .title::after{
     .galeria .galeriacorpo .container .card .imgBx{
         background: rgb(169, 166, 166) !important;
     }
-    .about .about-content .right .text{
-        margin-top: 70px;
+    .about .about-content  .right{
+        margin-top: 0px;
+        text-align: center;
     }
     .about .about-content .right p{
-        margin-bottom: 0px !important;
+        text-align: center;
+    }
+    .about .about-content .left1{
+        display: none !important;
+    }
+    .about .about-content .right2{
+        display: block !important;
+    }
+    .doacao .doacao-content .left .text{
+        text-align: center;
+    }
+    .doacao .doacao-content .left p{
+        text-align: center;
     }
 }
 
